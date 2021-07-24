@@ -1,13 +1,21 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watchAll",
+    "lint": "eslint . --ext .tsx,.ts --fix",
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "test:ci": "jest --runInBand",
     "prepare": "husky install"
+  },
+  "author": {
+    "name": "Alan Neres",
+    "email": "alanneres10@hotmail.com",
+    "url": "https://github.com/ner3s"
   },
   "jest": {
     "preset": "jest-expo"
@@ -27,6 +35,7 @@
     "expo-linking": "~2.3.1",
     "expo-splash-screen": "~0.11.2",
     "expo-status-bar": "~1.0.4",
+    "expo-updates": "~0.8.2",
     "expo-web-browser": "~9.2.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -41,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@testing-library/react-native": "^7.2.0",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "@types/styled-components": "^5.1.11",
@@ -61,6 +71,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.1",
     "jest-expo": "~41.0.0-beta.0",
+    "jest-styled-components": "^7.0.5",
     "prettier": "^2.3.2",
     "typescript": "~4.0.0"
   },

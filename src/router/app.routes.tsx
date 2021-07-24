@@ -1,5 +1,10 @@
 import React, { ReactElement } from 'react';
-import {createStackNavigator, TransitionPresets} from '@react-navigation/stack'
+
+import {
+  createStackNavigator,
+  TransitionPresets,
+} from '@react-navigation/stack';
+
 import { Home } from '../screens';
 
 const App = createStackNavigator();
@@ -9,10 +14,10 @@ function AppRoutes(): ReactElement {
     <App.Navigator
       screenOptions={{
         headerShown: false,
-        ...TransitionPresets.SlideFromRightIOS
+        ...TransitionPresets.SlideFromRightIOS,
       }}
-      >
-        <App.Screen name="Home" component={Home} />
+    >
+      <App.Screen name="Home" component={Home} />
     </App.Navigator>
   );
 }
