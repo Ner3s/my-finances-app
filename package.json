@@ -7,7 +7,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "eslint . --ext .tsx,.ts --fix",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watchAll",
     "test:ci": "jest --runInBand",
     "prepare": "husky install"
@@ -69,11 +69,11 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.1",
     "jest-expo": "~41.0.0-beta.0",
     "jest-styled-components": "^7.0.5",
     "prettier": "^2.3.2",
-    "typescript": "~4.0.0"
+    "typescript": "~4.0.0",
+    "husky": "^7.0.0"
   },
   "private": true
 }
