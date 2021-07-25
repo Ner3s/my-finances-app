@@ -9,8 +9,7 @@
     "lint": "eslint . --ext .tsx,.ts --fix",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watchAll",
-    "test:ci": "jest --runInBand",
-    "prepare": "husky install"
+    "test:ci": "jest --runInBand"
   },
   "author": {
     "name": "Alan Neres",
@@ -72,8 +71,7 @@
     "jest-expo": "~41.0.0-beta.0",
     "jest-styled-components": "^7.0.5",
     "prettier": "^2.3.2",
-    "typescript": "~4.0.0",
-    "husky": "^7.0.0"
+    "typescript": "~4.0.0"
   },
   "private": true
 }
