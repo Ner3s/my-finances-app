@@ -4,10 +4,10 @@ import React, { ReactElement, useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import Updates from 'expo-updates';
-import { ThemeProvider } from 'styled-components/native';
 
 import Routes from '~/router';
-import { light } from '~/styles/themes';
+
+import AppProvider from './hooks';
 
 export default function App(): ReactElement {
   useEffect(() => {
@@ -26,10 +26,10 @@ export default function App(): ReactElement {
   }, []);
   return (
     <NavigationContainer>
-      <ThemeProvider theme={light}>
+      <AppProvider>
         <StatusBar backgroundColor="#222" />
         <Routes />
-      </ThemeProvider>
+      </AppProvider>
     </NavigationContainer>
   );
 }

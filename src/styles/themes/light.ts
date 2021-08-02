@@ -3,8 +3,8 @@ import { ThemeType } from './types';
 
 const light: ThemeType = {
   colors: {
-    light: '#FFFFFF',
-    dark: '#000000',
+    light: '#F1F1F1',
+    dark: '#222222',
     primary: '#F4F4F4',
     secondary: '#222222',
   },
