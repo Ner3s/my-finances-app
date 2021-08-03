@@ -14,6 +14,12 @@ export interface TypeColor {
   readonly dark: string;
   readonly primary: string;
   readonly secondary: string;
+  readonly ice: string;
+  readonly lightgrey: string;
+  readonly darkgrey: string;
+  readonly red: string;
+  readonly yellow: string;
+  readonly background: string;
 }
 
 export interface FontStyle {

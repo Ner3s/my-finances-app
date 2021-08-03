@@ -1,4 +1,3 @@
-import { ThemeType } from '~/styles/themes/types';
 import 'styled-components/native';
 
 import themes from './themes/light';

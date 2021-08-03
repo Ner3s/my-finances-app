@@ -6,6 +6,7 @@ export const Container = styled.View`
   padding-top: ${Constants.statusBarHeight}px;
   width: 100%;
   height: 100%;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const Text = styled.Text`

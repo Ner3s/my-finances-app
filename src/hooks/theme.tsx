@@ -30,7 +30,7 @@ const AppThemeContext = createContext({} as AppThemeContext);
 const PREFIX = '@AppName';
 
 function AppThemeProvider({ children }: IAppThemeProps): ReactElement {
-  const colorTheme = useColorScheme(); // pega o thema do celular.
+  const colorTheme = useColorScheme(); // Get cellphone theme.
 
   const [currentValue, setCurrentValue] = useState<ThemeState>(
     colorTheme ?? 'light',
@@ -40,21 +40,16 @@ function AppThemeProvider({ children }: IAppThemeProps): ReactElement {
     const sendThemeType = currentValue === 'light' ? 'dark' : 'light';
     await AsyncStorage.setItem(`${PREFIX}: theme`, sendThemeType);
     setCurrentValue(sendThemeType);
-    console.log(
-      `\n\n ========= \n\n Value: ${sendThemeType} \n\n`,
-      themes[currentValue],
-    );
   };
 
   const handleGetTheme = async (): Promise<void> => {
-    let themeType: ThemeState = 'light';
+    let themeType: ThemeState = 'light'; // Default theme
 
     await AsyncStorage.getItem(`${PREFIX}: theme`).then((response?) => {
       themeType = response as ThemeState;
     });
 
-    console.log(`\n --> ${themeType}`);
-    setCurrentValue(themeType);
+    setCurrentValue(themeType); // Set new theme
   };
 
   useEffect(() => {

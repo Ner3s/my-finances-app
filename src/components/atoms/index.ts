@@ -9,3 +9,5 @@
 
 export { Text } from './Text';
 export { Input } from './Input';
+export { Logo } from './Logo';
+export { Gradient } from './Gradient';
