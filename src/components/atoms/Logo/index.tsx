@@ -9,7 +9,7 @@ interface ILogoProps {
 
 function Logo({ width, height }: ILogoProps): ReactElement {
   return (
-    <Svg width={width ?? '50'} height={height ?? '45'} viewBox="0 0 50 45">
+    <Svg width={width ?? '44'} height={height ?? '39'} viewBox="0 0 44 39">
       <Path
         fillRule="evenodd"
         clipRule="evenodd"

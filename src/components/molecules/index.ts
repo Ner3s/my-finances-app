@@ -6,3 +6,5 @@
  *
  * Ex.: Input search with button
  */
+
+export { ButtonLogo } from './ButtonLogo';
