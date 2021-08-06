@@ -1,18 +1,18 @@
 import { FontSizeType, ThemeType, TypeSize } from './types';
 
 const spacings: TypeSize = {
-  small: '1.5rem',
-  medium: '3rem',
-  large: '5rem',
-  xl: '10rem',
+  small: '15px',
+  medium: '30px',
+  large: '50px',
+  xl: '100px',
 };
 
 const fontSize: FontSizeType = {
-  small: '1.5rem',
-  medium: '1.8rem',
-  large: '3rem',
-  superLarge: '5rem',
-  xl: '10rem',
+  small: '16px',
+  medium: '24px',
+  large: '32px',
+  superLarge: '40px',
+  xl: '48px',
 };
 
 export const sizes: Pick<ThemeType, 'font' | 'spacings'> = {

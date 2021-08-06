@@ -27,7 +27,7 @@ export default function App(): ReactElement {
   return (
     <NavigationContainer>
       <AppProvider>
-        <StatusBar backgroundColor="#222" />
+        <StatusBar backgroundColor="transparent" />
         <Routes />
       </AppProvider>
     </NavigationContainer>

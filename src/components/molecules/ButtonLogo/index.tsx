@@ -2,13 +2,26 @@ import React, { ReactElement } from 'react';
 
 import { Gradient, Logo } from '~/components/atoms';
 
-import { Container } from './styles';
+import { Container, WrapperLogo } from './styles';
 
-function ButtonLogo(): ReactElement {
+interface IButtonLogoProps {
+  logoGradient?: boolean;
+}
+
+function ButtonLogo({ logoGradient }: IButtonLogoProps): ReactElement {
   return (
     <Container>
-      <Gradient>
-        <Logo />
+      <Gradient
+        gradientStyles={{
+          overflow: 'hidden',
+          borderRadius: 50,
+        }}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+      >
+        <WrapperLogo>
+          <Logo logoGradient={logoGradient} />
+        </WrapperLogo>
       </Gradient>
     </Container>
   );
