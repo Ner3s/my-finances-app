@@ -9,7 +9,7 @@ import React, {
 import { useColorScheme } from 'react-native';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components/native';
 
 import themes from '~/styles/themes';
 import { ThemeType } from '~/styles/themes/types';
@@ -45,11 +45,15 @@ function AppThemeProvider({ children }: IAppThemeProps): ReactElement {
   const handleGetTheme = async (): Promise<void> => {
     let themeType: ThemeState = 'light'; // Default theme
 
-    await AsyncStorage.getItem(`${PREFIX}: theme`).then((response?) => {
-      themeType = response as ThemeState;
-    });
-
-    setCurrentValue(themeType); // Set new theme
+    try {
+      const response = (await AsyncStorage.getItem(
+        `${PREFIX}: theme`,
+      )) as ThemeState;
+      themeType = response ?? 'light';
+      setCurrentValue(themeType); // Set new theme
+    } catch {
+      console.warn("Don't load theme previous");
+    }
   };
 
   useEffect(() => {
